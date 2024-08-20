@@ -7,8 +7,8 @@ window.setInterval(callback, delay)
 Очищення інтервалів та таймаутів clearInterval(intervalID), clearInterval(timeoutID)
 */
 
-console.log('First');
-setTimeout(() => {
-  console.log('From set timeout');
-}, 2000);
-console.log('Second');
+// console.log('First');
+// setTimeout(() => {
+//   console.log('From set timeout');
+// }, 2000);
+// console.log('Second');
