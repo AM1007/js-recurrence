@@ -8,7 +8,18 @@ window.setInterval(callback, delay)
 */
 
 // console.log('First');
-// setTimeout(() => {
+
+// const timeoutId = setTimeout(() => {
 //   console.log('From set timeout');
-// }, 2000);
+// }, 5000);
 // console.log('Second');
+
+// document.addEventListener('click', () => {
+//   clearTimeout(timeoutId);
+// });
+
+const intervalId = setInterval(() => {
+  console.log('From setInterval');
+}, 1000);
+
+clearInterval(intervalId);
