@@ -1,41 +1,33 @@
-@import url('modern-normalize/modern-normalize.css');
+@import url('../reset.css');
 
-body {
-  color: #2a2a2a;
+.timer__items {
+  display: flex;
+  font-size: 48px;
+  max-width: max-content;
+  margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
 }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
+.timer__item::before {
+  content: attr(data-title);
   display: block;
-  max-width: 100%;
-  height: auto;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
 }
 
-.list {
-  list-style-type: none;
-}
-
-.link {
-  text-decoration: none;
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
 }

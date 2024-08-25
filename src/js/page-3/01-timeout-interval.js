@@ -18,8 +18,8 @@ window.setInterval(callback, delay)
 //   clearTimeout(timeoutId);
 // });
 
-const intervalId = setInterval(() => {
-  console.log('From setInterval');
-}, 1000);
+// const intervalId = setInterval(() => {
+//   console.log('From setInterval');
+// }, 1000);
 
-clearInterval(intervalId);
+// clearInterval(intervalId);
