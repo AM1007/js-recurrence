@@ -49,44 +49,44 @@
 
 // Рішення через promise
 
-const loadScript = (scriptUrl, onSuccess, onError) => {
-  const promise = new Promise((resolve, reject) => {
-    const scriptEl = document.createElement('script');
+// const loadScript = scriptUrl => {
+//   const promise = new Promise((resolve, reject) => {
+//     const scriptEl = document.createElement('script');
 
-    scriptEl.src = scriptUrl;
+//     scriptEl.src = scriptUrl;
 
-    document.body.append(scriptEl);
+//     document.body.append(scriptEl);
 
-    scriptEl.addEventListener('load', () => {
-      resolve(`${scriptUrl} завантажився успішно!`);
-    });
+//     scriptEl.addEventListener('load', () => {
+//       resolve(`${scriptUrl} завантажився успішно!`);
+//     });
 
-    scriptEl.addEventListener('error', () => {
-      reject(`${scriptUrl} не завантажився`);
-    });
-  });
+//     scriptEl.addEventListener('error', () => {
+//       reject(`${scriptUrl} не завантажився`);
+//     });
+//   });
 
-  return promise;
-};
+//   return promise;
+// };
 
-loadScript('https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js')
-  .then(message => {
-    console.log(message);
+// loadScript('https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js')
+//   .then(message => {
+//     console.log(message);
 
-    return loadScript(
-      'https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'
-    );
-  })
-  .then(message => {
-    console.log(message);
+//     return loadScript(
+//       'https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'
+//     );
+//   })
+//   .then(message => {
+//     console.log(message);
 
-    return loadScript(
-      'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
-    );
-  })
-  .then(message => {
-    console.log(message);
-  })
-  .catch(message => {
-    console.log(message);
-  });
+//     return loadScript(
+//       'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+//     );
+//   })
+//   .then(message => {
+//     console.log(message);
+//   })
+//   .catch(message => {
+//     console.log(message);
+//   });
